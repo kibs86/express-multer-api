@@ -10,4 +10,9 @@ let file = {
 };
 
 
-s3Upload(file);
+s3Upload(file)
+  .then(function(data){
+    console.log("inside then block");
+    console.log("data is ", data);
+  })
+  .catch(console.error);
